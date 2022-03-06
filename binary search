@@ -4,12 +4,12 @@ up up
 int main()
 {
 	int array[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int k = 2;
+	int k =7 ;
 	int sz = sizeof(array) / sizeof(array[0]);
 	int left = 0;
 	int right =sz-1 ;
 	int mid =( left + right)/2;
-	while (1)
+	while (left<=right)
 	{
 		if (array[mid] == k)
 		{
@@ -27,8 +27,9 @@ int main()
 			right = mid - 1;
 			mid = (left + right) / 2;
 		}
-
-
-
-	}
+		if (left > right)
+		{
+			printf("超出范围");
+		}
+    }
 }
