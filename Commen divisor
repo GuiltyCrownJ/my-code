@@ -1,0 +1,23 @@
+# my-code
+#include<stdio.h>
+int main()
+{
+    int m = 0;
+    int n = 0;
+    scanf_s("%d %d", &m, &n);
+    int MAX = m > n ? n : m;
+    while (1)
+    {
+        
+        MAX--;
+        if (0 < MAX)
+        {
+
+            if (m % MAX == 0 && n % MAX == 0)
+            {
+                printf("%d", MAX);
+                break;
+            }
+        }
+    }
+}
