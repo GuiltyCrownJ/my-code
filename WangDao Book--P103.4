@@ -1,0 +1,54 @@
+# my-code
+int num=0;
+semaphore empty=N;
+semaphore odd = 0;
+semaphore even = 0;
+semaphore mutex = 1;
+
+p1()                                      
+{
+    while (1)
+    {
+        num = produce();
+        p(empty);
+        p(mutex);
+        put();
+        v(mutex);
+        if (num % 2 == 0)
+        {
+            v(even);
+        }
+        else
+        {
+            v(odd);
+        }
+    }
+
+}
+
+p2()
+{
+    while (1)
+    {
+        p(odd);
+        p(mutex);
+        getodd();
+        v(mutex);
+        v(empty);
+        countodd();
+    }
+}
+
+p3()
+{
+    while (1)
+    {
+        p(even);
+        p(mutex);
+        geteven();
+        v(mutex);
+        v(even);
+        counteven();
+    }
+}
+    
