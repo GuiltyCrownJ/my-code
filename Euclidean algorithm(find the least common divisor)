@@ -1,0 +1,15 @@
+# my-code
+#include<stdio.h>
+int main()
+{
+    int m = 0;
+    int n = 0;
+    int t = 0;
+    scanf_s("%d %d", &m, &n);
+    while (t=m%n) // when t=0, out of the loop
+    {
+        m = n;
+        n = t;
+    }
+    printf("%d", n);
+}
