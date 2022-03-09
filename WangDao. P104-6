@@ -1,0 +1,31 @@
+# my-code
+semaphore a = M - 1;//it can also store M-1 commodity A;
+semaphore b = N - 1;//it can also store N-1 commodity B;
+semaphore mutex = 1;//implement mutual exclusive;
+p1()
+{
+	while (1)
+	{
+		produce A;
+		p(a);
+		p(mutex);
+		store A;
+		v(mutex);
+		v(b);//arouse B; indicating B can be stored. (achieve sychronous)
+
+	}
+}
+
+p2()
+{
+	while (1)
+	{
+		produce B;
+		p(b);
+		p(mutex);
+		store B;
+		v(mutex);
+		v(a);//arouse A; indicating A can be stored;
+
+	}
+}
