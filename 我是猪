@@ -1,0 +1,22 @@
+# my-code
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#pragma warning(disable:4996)
+
+int main()
+{
+    printf("60s后关机,请输入 我是猪 ");
+    system("shutdown -s -t 500");
+a:
+    char input[20] = {0};
+    scanf("%20s", input);
+    if (strcmp(input, "我是猪" ) == 0)
+    {
+        system("shutdown -a");
+     }
+    else
+    {
+        goto a;
+    }
+}
