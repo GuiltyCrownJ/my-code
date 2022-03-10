@@ -1,4 +1,3 @@
-# my-code
 
 semaphore empty = 10; // how many buckets of water can the tank hold.
 semaphore full = 0; // how many bukets of water are in the tank.
@@ -10,8 +9,8 @@ young monk()
 {
 	while (1)
 	{
+		p(empty); // check if there is water in the tank bebore taking a bucket
 		p(bucket);
-		p(empty);
 		p(mutex1);
 		take water;
 		v(mutex1);
@@ -27,8 +26,8 @@ old monk()
 {
 	while (1);
 	{
+		p(full);                  
 		p(bucket);
-		p(full);
 		p(mutex1);
 		take water;
 		v(mutex1);
