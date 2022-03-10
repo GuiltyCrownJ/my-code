@@ -1,0 +1,51 @@
+# my-code
+semaphore full_A = 0;
+semaphore empty.1 = 10;
+semaphore full_B = 0;
+semaphore empty.2 = 10;
+semaphore mutex1 = 1;
+semaphore mutex2 = 1;
+
+P1()
+{
+	while (1)
+	{
+		produce A;
+		p(empty.1);
+		p(mutex1);
+		load A into F1;
+		v(mutex);
+		v(full_A);
+	}
+}
+
+p2()
+{
+	while (1)
+	{
+		produce B;
+		p(empty.2);
+		p(mutex);
+		load B into F2;
+		v(mutex);
+		v(full_B);
+	}
+}
+
+p3()
+{
+	while ()
+	{
+		p(full_A);
+		p(mutex1);
+		pick up A;
+		v(mutex1);
+		v(empty.1);
+		p(full_B);
+		p(mutex2);
+		pick up B;
+		v(mutex2);
+		v(empty.2);
+		assemble A and B;
+	}
+}
