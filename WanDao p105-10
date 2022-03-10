@@ -1,0 +1,41 @@
+# my-code
+
+semaphore empty = 10; // how many buckets of water can the tank hold.
+semaphore full = 0; // how many bukets of water are in the tank.
+semaphore buket = 3; // number of empty bucket
+semaphore mutex = 1; 
+semaphore mutex2 = 1;
+
+young monk()
+{
+	while (1)
+	{
+		p(bucket);
+		p(empty);
+		p(mutex1);
+		take water;
+		v(mutex1);
+		p(mutex2);
+		pour water;
+		v(mutex2);
+		v(full);
+		v(bucket);
+	}
+}
+
+old monk()
+{
+	while (1);
+	{
+		p(bucket);
+		p(full);
+		p(mutex1);
+		take water;
+		v(mutex1);
+		p(mutex2);
+		drink water;
+		v(mutex2);
+		v(empty);
+		v(bucket);
+	}
+}
