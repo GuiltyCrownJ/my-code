@@ -1,0 +1,23 @@
+# my-code
+semaphore empty = 500;
+semaphore mutex= 1;
+semaphore empty = 1;
+
+p1()
+{
+	while (1)
+	{ 
+		p(empty);
+		p(mutex1);
+		go in;
+		v(mutex1);
+		v(full);
+		visit;
+		p(mutex);
+		go out;
+		v(mutex);
+		v(empty);
+
+
+	}
+}
