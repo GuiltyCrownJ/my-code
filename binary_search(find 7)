@@ -1,0 +1,37 @@
+# my-code
+
+int binary_search(int x[], int y, int z)
+{
+	int left = 0;
+	int right = z;
+	int mid =( left+right)/2;
+	while (left<=right)
+	{
+		if (y > mid)
+		{
+			left = mid + 1;
+			mid = (left + right) / 2;
+			return 1;
+		}
+		else if (y < mid)
+		{
+			right = mid - 1;
+			mid = (left + right) / 2;
+			return 1;
+		}
+		else
+			return EOF;
+			
+
+	}
+}
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int key = 7;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int ret = binary_search(arr,key,sz);
+	if (-1 == ret)
+	{
+		printf("找不到了\n");
+	}
