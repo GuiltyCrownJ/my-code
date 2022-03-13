@@ -1,0 +1,18 @@
+# my-code
+#include <stdio.h>
+#include <string.h>
+
+int my_strlen(char *s)
+{
+if (*s != '\0')
+        return 1 + my_strlen(++s); 
+//return 1 + my_strlen(s++);
+    else
+        return 0;
+}
+
+int main()
+{
+    char arr[] = "bit";
+    printf("%d\n",  my_strlen(arr));
+}
