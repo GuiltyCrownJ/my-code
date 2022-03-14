@@ -1,0 +1,36 @@
+# my-code
+semaphore empty = 10; // number of empty seats
+semaphore full = 0; // number of positions occupied
+semaphore service = 0; // providing service(1 or 0)
+semaphore mutex = 1; // implement mutual exclusion
+
+customers()
+{
+	while (1)
+	{
+		p(empty);
+		p(mutex);
+		get a number;
+		v(mutex);
+		v(full);
+		wait for service;
+
+		p(service);
+		obtain service;
+
+	}
+}
+
+clerk()
+{
+	while (1)
+	{
+
+		p(full); // when none of people could be called, calling must be waiting;
+		v(empty);
+		call a number;	
+		v(service);
+		provide service;  //  only a clerk.lt needn't mutex;
+
+	}
+}
