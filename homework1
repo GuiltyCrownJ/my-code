@@ -1,0 +1,16 @@
+# my-code
+#include <stdio.h>
+
+int main()
+{
+	int n = 0;
+	double u = 0.0;
+	for (n = 1; 100 >= n; n++)
+	{
+		if (0 == n % 2)
+			u -=1.0 / n;
+		else
+			u+=1.0/ n;
+	}
+	printf("%lf", u);
+}
