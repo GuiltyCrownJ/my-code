@@ -1,0 +1,74 @@
+//question 1;
+
+semaphore s = 1;
+
+north()
+{
+	while (1)
+	{
+		p(s);
+		pass bridge;
+		v(s);
+	}
+}
+
+south()
+{
+	while (1)
+	{
+		p(s);
+		pass bridge;
+		v(s);
+	}
+}
+
+//question 2:
+
+sermaphore bridge = 1; // indicate the sourse of bridge 
+semaphore mutexN = 1;// protect countN
+semaphore mutexS = 1; // protect countS
+int countS = 0; // number of cars from north
+int countN = 0; // number of cars from south
+
+north()
+{
+	while (1)
+	{
+		P(mutexN);          // first reader make mutex closed;  
+		if (countN == 0)
+	       p(bridge);
+
+        countN++;
+		v(mutexN);
+		pass bridge;   
+		P(mutexN);    // last reader make mutex opened;
+		countN--;
+
+		if (countN == 0)
+		   v(bridge);
+		v(mutexN);
+
+	}
+}
+
+south()
+{
+	while (1)
+	{
+		P(mutexS);          // first reader make mutex closed;  
+		if (countS == 0)
+			p(bridge);
+
+		countS++;
+		v(mutexS);
+		pass bridge;
+		P(mutexS);    // last reader make mutex opened;
+		countS--;
+
+		if (countS == 0)
+			v(bridge);
+		v(mutexS);
+
+	}
+}
+
