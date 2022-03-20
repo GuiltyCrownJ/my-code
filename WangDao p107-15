@@ -1,0 +1,72 @@
+int box1 = N;  // record the number of boxes
+semaphore box = N; // number of boxes
+semaphore wheel = 0; // the number of wheel that the box can hold
+semaphore frame = 0; // the number of frame that the box can hold
+semaphore mutex = 1; // mutex decord critical section
+semaphore mutex1 = 1; // protect box1
+
+worker1()
+{
+	do{	
+		machining a car frame;
+
+		p(mutex1);
+		if(box1 >=2)
+		   p(box);
+		p(mutex);
+		put a car frame into box;
+		v(mutex);
+		box1--;
+		v(frame);
+		v(mutex1);
+
+	}while(1)
+}
+
+worker2()
+{
+	do{
+		machining a car wheel;
+
+		p(mutex1);
+		if(box1>=1)
+		   p(box);
+		p(mutex);
+		put a car wheel into box;
+		v(mutex);
+		box1--;
+		v(wheel);
+		v(mutex1);
+	}while(1)
+}
+
+worker3()
+{
+	do{
+
+		P(frame);
+		p(mutex1);
+		p(mutex);
+		pick up a car frame from box;
+		v(mutex);
+		v(box);
+		box1++;
+		v(mutex1);
+
+		p(wheel);
+		p(wheel);
+		p(mutex1);
+		p(mutex);
+		pick up two car wheel from box;
+		v(mutex);
+		v(box);
+		v(box);
+		box1 += 2;
+		v(mutex1);
+
+
+		assessble a car;
+
+	}while(1)
+}
+
