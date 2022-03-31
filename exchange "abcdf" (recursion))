@@ -1,0 +1,32 @@
+# my-code
+#include <stdio.h>
+
+int my_strlen(char *pr)
+{
+	int count = 0;
+	while (*pr != '\0')
+	{
+		count++;
+		pr++;
+	}
+	return count;
+}
+void my_reverse(char *str)
+{
+	int right= my_strlen(str) - 1;
+	char tmp = *str;
+	*str = str[right];
+	str[right] = '\0';
+	if (my_strlen(str)>1)
+	my_reverse(str+1);
+
+     str[right] = tmp;
+	
+}
+
+int main()
+{
+	char arr[] = "abcdef";
+	my_reverse(arr);
+	printf("%s", arr);
+}
