@@ -1,0 +1,38 @@
+# my-code
+#include <stdio.h>
+
+int my_strlen(char* pr)
+{
+	int count = 0;
+	while (*pr != '\0')
+	{
+		count++;
+		pr++;
+	}
+	return count;
+}
+
+void my_reverse(char* pa)
+{
+
+	int left = 0;
+	int right = my_strlen(pa)-1;//subscript
+	while (right >= left)
+	{
+		char tmp = pa[right];// equevalent to  *(pa+right)
+		pa[right] = pa[left];
+		pa[left] = tmp;
+		left++;
+		right--;
+	}
+	
+
+	
+}
+
+int main()
+{
+	char arr[] = "abcdef";
+	my_reverse(arr);
+	printf("%s", arr);
+}
