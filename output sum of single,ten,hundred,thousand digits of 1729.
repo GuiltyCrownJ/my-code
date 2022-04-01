@@ -1,0 +1,24 @@
+# my-code
+
+#include<stdio.h>
+
+int DigitSum(int x)
+{
+	int a = x % 10;
+	if (x >= 1)
+	{
+		x /= 10;
+		return a + DigitSum(x);
+	}
+
+}
+
+int main()
+{
+	int num = 1729;
+	int sum = DigitSum(num);
+
+	printf("%d", sum);
+	return 0;
+
+}
