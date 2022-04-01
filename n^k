@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int function1(int x,int y)
+{
+
+	if (y > 0) 
+	return x * function1(x,y-1);
+	
+	
+}
+
+int main()
+{
+	int n = 0;
+	int k = 0;
+	
+	scanf("%d^%d", &n, &k);
+	int ret = function1(n, k);
+	printf("%d", ret);
+
+}
