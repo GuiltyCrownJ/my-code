@@ -1,12 +1,14 @@
 #include<stdio.h>
 
-int function1(int x,int y)
+double function1(int x,int y)
 {
 
-	if (y > 0) 
-	return x * function1(x,y-1);
-	
-	
+	if (y > 0)
+		return x * function1(x, y - 1);
+	else if (y == 0)
+		return 1.0;
+	else
+		return 1.0 / function1(x, -y);
 }
 
 int main()
@@ -15,7 +17,9 @@ int main()
 	int k = 0;
 	
 	scanf("%d^%d", &n, &k);
-	int ret = function1(n, k);
-	printf("%d", ret);
+	double ret = function1(n, k);
+	printf("%lf", ret);
 
 }
+
+	
