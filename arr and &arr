@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+ 
+    int arr[10] = { 0 };
+    printf("%p\n", &arr); // the address of array
+    printf("%p\n", &arr+1);
+
+    printf("%p\n", arr); // the address of first element of array
+    printf("%p\n", arr+1);
+
+    printf("%p\n", &arr[0]);
+    return 0;
+
+}
