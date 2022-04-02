@@ -1,0 +1,39 @@
+# my-code#include <stdio.h>
+#include <string.h>
+
+void bubble_sort(int arr[], int z)
+ { 
+   
+    int i = 0;
+   
+    for (int x = 0; x < z - 1; x++) // how many implement bubble sorts;
+    {
+        int j = 0;
+       for (j = 0; j < z - 1-i;  j++)   // a bubble sorting process
+        {
+            if (arr[j] > arr[j+1])
+            {
+                int tmp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = tmp;
+            }
+            
+
+
+        }
+       
+    }
+    
+   
+}
+
+int main()
+{
+    int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+    int z = sizeof(arr) / sizeof(arr[0]); // how many implement bubble sorts;
+    bubble_sort(arr,z);
+
+
+    return 0;
+
+}
