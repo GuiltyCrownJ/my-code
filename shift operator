@@ -1,0 +1,18 @@
+##include <stdio.h>
+
+int main()
+{
+	int a = 2;
+	int d = -1;
+	int b = a << 1;
+	int c = a >> 1;
+	int x = d >> 1;
+	printf("%d\n", b);
+	printf("%d\n", c);
+	printf("%d\n", d);
+
+	return 0;
+
+}
+
+
