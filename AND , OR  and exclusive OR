@@ -1,0 +1,58 @@
+# my-code
+#include<stdio.h>
+int main()
+{
+	int a = 3;
+	int b = 5;
+
+	// Bitwise AND operator
+	int c = a & b;
+	// 00000000000000000000000000000011
+	// 00000000000000000000000000000101
+	// 00000000000000000000000000000001 (after AND)
+	printf("%d\n", c);
+
+	// Bitwise OR operator
+	int d = a | b;
+	// 00000000000000000000000000000011
+	// 00000000000000000000000000000101
+	// 00000000000000000000000000000111 (after OR)
+	printf("%d\n", d);
+
+	// exclusive OR operator
+	// same as 0, else 1;
+	int e = a ^ b;
+	// 00000000000000000000000000000011
+	// 00000000000000000000000000000101
+	// 00000000000000000000000000000110
+	printf("%d\n", e);
+
+	// exchange a and b without using other letter 
+	a = a ^ b; // 
+	b = a ^ b;
+	a = a ^ b;
+	printf("%d %d\n", a, b);
+	// extension:
+	// a^a=0
+	// a^0=a
+
+	int s = 13;
+	int f = s & 1;
+	int count = 0;
+	int i = 1;
+
+	while (i<=31)
+	{
+		if(f==1)
+		count++;
+
+		s = s >> 1;
+		f = s & 1;
+		i++;
+	}
+
+	printf("%d\n", count);
+
+	
+
+}
