@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	// Bitwise NOT
+
+	int a = -1;
+	// 10000000000000000000000001 Original Code
+	// 11111111111111111111111110 Inverse Code
+	// 
+	// 11111111111111111111111111 Complement Code
+	// ~
+	// 00000000000000000000000000
+	int b = ~a;
+	printf("%d\n",a);
+	printf("%d\n",b);
+    
+
+}
