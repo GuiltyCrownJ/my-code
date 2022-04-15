@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 struct book
 {
     char name[20];
@@ -13,6 +12,13 @@ int main()
     printf("%s\n", b.name);
     printf("%s\n", b.id);
     printf("%d\n", b.price);
+    struct book *pb = &b;
+    printf("%s\n", (*pb).name);
+    printf("%s\n", (*pb).id);
+    printf("%d\n", (*pb).price);
+    printf("%s\n", pb->name);
+    printf("%s\n", pb->id);
+    printf("%d\n", pb->price);
             
     return 0;
 }
