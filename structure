@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+struct book
+{
+    char name[20];
+    char id[20];
+    int price;
+};
+int main()
+{
+    int num = 10;
+    struct book b = { "c语言","sdkfj2134",55 };
+    printf("%s\n", b.name);
+    printf("%s\n", b.id);
+    printf("%d\n", b.price);
+            
+    return 0;
+}
