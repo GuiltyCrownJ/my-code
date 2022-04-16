@@ -5,6 +5,10 @@ int main()
     char str[] = "hello bit";
     printf("%d %d", sizeof(str), strlen(str));// 10 9
     //sizeof : compute the space of array
-    //strlen : compute the number of elements
-    return 0;
+    //strlen : compute the number of elements 
+    
+    char acX[] = "abcdefg"; // a b c d e f g \0
+    char acY[] = { 'a','b','c','d','e','f','g' }; // a b c d e f g
+
+return 0;
 }
