@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int main()
+{
+	int a = 10; // a is occupied 4 Bytes
+	int * pa = &a;// take the one of 4 Bytes of address
+	*pa = 20;// pointer variable
+
+	float* pc;
+	char* pf;
+	printf("%d\n", sizeof(pa));
+	printf("%d\n", sizeof(pc));
+	printf("%d\n", sizeof(pf));
+
+	//1.pointer type determine the ability of reference
+	int b = 0x11223344;
+	int* p1 = &b;
+	*p1 = 0;
+	char c= 0x11223344;
+	char* p2 = &c;
+	*p2 = 0;
+
+	//2.pointer type determine how long the pointer goes each a step
+	int arr[10] = { 0 };
+	int* p = arr;
+	char arr3[10] = { 0 };
+	char* p3 = arr3;
+	printf("%p\n", p);
+	printf("%p\n", p+1);
+	printf("%p\n", p3);
+	printf("%p\n", p3+1);
+
+
+
+
+	return 0;
+
+	
+}
+  
