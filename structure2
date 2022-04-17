@@ -1,0 +1,51 @@
+#include<stdio.h>
+
+struct B
+{
+	char c;
+	short s;
+	double d;
+
+};
+
+struct Stu
+{
+	// member variable
+	struct B sb;
+	char name[20];
+	int age;
+	char id[20];
+} s1, s2;//global variable
+
+
+void print1(struct Stu t)//1- s can't be changed
+                         //2- system expense too much
+{
+	printf("%c %d %lf %s %d %s\n", t.sb.c, t.sb.s, t.sb.d, t.name, t.age, t.id);
+}
+
+void print2(struct Stu* pr)// s could be controlled
+{
+	printf("%c %d %lf %s %d %s\n", pr->sb.c, pr->sb.s, pr->sb.d, pr->name, pr->age, pr->id);
+}
+
+
+int main()
+{
+	struct Stu s = { {'w',20,3.14},"张三",30,"2039745" };// local variable
+	//. ->
+	printf("%c\n", s.sb.c);
+	printf("%s\n", s.id);
+	struct Stu* ps = &s;
+	printf("%c\n", s.sb.c);
+	printf("%c\n", (*ps).sb.c);
+	printf("%c\n", ps->sb.c);
+	
+	print1(s); // call by value
+	print2(&s); // call by address
+
+
+
+	return 0;
+}
+  
