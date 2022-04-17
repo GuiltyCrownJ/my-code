@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+
+int main()
+{
+	int arr[10]; // integer array
+	char ch[5]; // charactor array
+	int* parr[5]; // integer pointer array
+	char* pch[5]; // charactor pointer array
+
+	return 0;
+
+	
+}
+  
