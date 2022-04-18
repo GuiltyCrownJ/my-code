@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+
+void my_strcpy(char* dest, char* src)
+{
+	while (*dest++ = *src++)
+	{
+		;
+	}
+
+}
+
+int main()
+{
+	char arr1[20] = "xxxxxxxxx";
+	char arr2[] = "hello";
+	my_strcpy(arr1, arr2);
+	printf("%s\n", arr1);
+	printf("%s\n", arr2);
+	return 0;
+}
+  
