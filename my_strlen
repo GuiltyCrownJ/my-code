@@ -2,11 +2,12 @@
 #include<string.h>
 #include<assert.h>
 
-int my_strlen(const char* arr)
+//size_t - unsigned int
+size_t my_strlen(const char* arr)
 {
 	/*assert(arr != NULL);*/
 	assert(arr);
-	int count = 0;
+	size_t count = 0;
 	while (*arr++)
 	{
 		count++;
