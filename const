@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+
+int main()
+{
+	//const constant(variable) 
+	const int num = 10;
+
+
+	
+	//const int* p = &num; // const importance:it can't be changed by pointer what the pointer points to, but pointer variable can.
+    int const* p = &num; // pointer variable can't be changed but the what pointer points to is OK;
+	int n = 20; 
+
+	//*p = 20; 
+	p = &n;
+   
+//conclusion:
+	//int const *p =&m;           int* const p=&m;
+	//*p=0;      wrong            *p=0;   wrong
+	//p=&n;      correct          p=&n;   correct
+
+	//int const * const p=&m;
+	//*p=0;      wrong    
+	//p=&n;      wrong 
+	// 
+// int const * const * const p
+	printf("%d\n", num);
+}
+  
