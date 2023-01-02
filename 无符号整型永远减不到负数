@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	unsigned int i;
+	for (i = 9; i >= 0; i--)
+	{
+		printf("%u\n", i);//i为无符号整型打印
+	//printf("%d\n", i);//i变成了有符号整型进行打印
+	}
+	return 0;
+}
