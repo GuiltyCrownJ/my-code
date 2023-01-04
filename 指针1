@@ -17,6 +17,14 @@ int main()
 	printf("%c\n", *ps);//'h'
 	printf("%s\n", ps);//"hello bit"
 	printf("%s\n",arr);//"hello bit"
+	
+	char arr1[] = "hello bit";
+	const char* px = "hello bit";// 常量字符串不能被修改
+	// const(指针指向字符串的左边，指针不能被修改)
+	char arr1[0]='w';
+	//     *px = 'w'; // 报错
+	
+	
 
 	return 0;
 }
