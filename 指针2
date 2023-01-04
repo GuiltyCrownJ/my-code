@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	char str1[] = "hello bit.";
+	char str2[] = "hello bit.";
+	const char* str3 = "hello bit.";//常量字符串
+	const char* str4 = "hello bit.";//常量字符串
+
+	if (str1 == str2) //不同的字符数组   (代码区）
+		printf("str1 and str1 are same\n");
+	else
+		printf("str1 and str2 are not same\n");//
+	if (str3 == str4) //同一个常量字符串（全局区）
+		printf("str3 and str4 are same\n");//
+	else
+		printf("str3 and str4 are not same\n");
+
+	return 0;
+}
+
