@@ -14,9 +14,9 @@ int main()
 	          //arr指向h(首字符)//
 	          //ps指向h(首字符)//
 	
-	printf("%c\n", *ps);
-	printf("%s\n", ps);
-	printf("%s\n",arr);
+	printf("%c\n", *ps);//'h'
+	printf("%s\n", ps);//"hello bit"
+	printf("%s\n",arr);//"hello bit"
 
 	return 0;
 }
