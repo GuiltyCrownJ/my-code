@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	//指针大小固定（32位：4byte，64位：8byte）
+	//char ch = 'q';
+	//char* pc = &ch;
+
+	/*(变量)*/const char* ps = "hello bit";//十个字符
+	          //ps指向h(首字符)//
+	          //ps表示h的地址//
+	/*数组*/        char arr[] = "hello bit";
+	          //arr指向h(首字符)//
+	          //ps指向h(首字符)//
+	
+	printf("%c\n", *ps);
+	printf("%s\n", ps);
+	printf("%s\n",arr);
+
+	return 0;
+}
+
