@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int(*parr3[10])[5];//parr3是一个有十个元素的数组
+	                   //每个元素都是一个数组指针
+	                   //每个数组指针指向一个由五个元素组成的数组
+	                   //每个元素的类型为int
+
+	return 0;
+}
+
