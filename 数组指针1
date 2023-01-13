@@ -1,0 +1,37 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int a = 10;
+	int* pa = &a;
+	char ch = 'w';
+	char* pc = &ch;
+
+	int arr[10] = { 1,2,3,4,5 };
+	// int* parr=&arr; 不能把数组地址放到整型地址里面去
+	// int* parr[10]=&arr;  错误写法(parr会先跟方块结合)
+	int(*parr)[10] = &arr;//parr就是一个数组指针 
+
+	double* d[5];
+	double* (* pd)[5] = &d;//pd就是一个数组指针
+	
+	int arr2[10] = { 0 };
+	printf("%p\n", arr2); //012FF810 首元素的地址
+	printf("%p\n", &arr2);//012FF810 数组的地址
+
+	char c = 'a';//asc char 97
+	int i = 97;  //    int  97
+
+	int arr1[10] = { 1,2,3,4,5 };
+	int* p1 = arr1;
+	int(*p2)[10] = &arr1;
+	printf("%p\n", p1);
+	printf("%p\n", p1+1);//跳过一个元素
+	printf("%p\n", p2);
+	printf("%p\n", p2+1);//跳过一个数组
+	
+
+	return 0;
+}
+
