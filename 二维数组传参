@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+void test(int *arr) // 不行
+{}
+void test(int* arr[5])// 不行
+{}
+void test(int (*arr)[5])
+{}
+void test(int **arr)// 不行
+{}
+
+
+int main()
+{
+	int arr[3][5] = {0};
+	test(arr); //传过去的是个数组指针
+	
+
+	return 0;
+}
