@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+void test(int arr[])
+{}
+void test(int arr[10])
+{}
+void test(int *arr)
+{}
+void test(int *arr[20])
+{}
+void test(int **arr)
+{}
+
+int main()
+{
+	int arr[10] = { 0 };
+	int* arr2[20] = { 0 };
+	test(arr);
+	test(arr2);
+
+	return 0;
+}
