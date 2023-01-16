@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int i;
+
+int main()
+{
+	i--;
+	if (i > sizeof(i)) //sizeof只能测unsigned int
+		printf(">");   
+	else
+		printf("<");
+	return 0;
+
+}
